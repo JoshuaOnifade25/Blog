@@ -1,0 +1,27 @@
+{% comment %} Django has a powerful template language that allows you to specify
+how data is displayed. It is based on template tags, template variable, and template filter:
+.Template tags control the rendering of the templates and look like {% tag %}
+.Template variables get replaced {% endcomment %}
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>{% block title %}{% endblock %}</title>
+    <link href="{% static 'css/blog.css' %}" rel="stylesheet">
+    
+</head>
+<body> 
+
+    <div id="content">
+        {% block content %}
+        {% endblock %}
+    </div>
+
+    <div  id="sidebar">
+        <h2>My blog</h2>
+        <p>This is my blog.</p>
+
+    </div>
+    
+</body>
+</html>
